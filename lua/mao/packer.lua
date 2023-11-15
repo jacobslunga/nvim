@@ -30,5 +30,11 @@ return require('packer').startup(function(use)
     priority = 1000,
     opts = {},
   }
-  use {'ojroques/nvim-hardline'}
+  use "savq/melange-nvim"
+  use "kihachi2000/yash.nvim"
+  use { "catppuccin/nvim", as = "catppuccin" }
+  use 'tjdevries/colorbuddy.vim'
+  use 'norcalli/nvim-colorizer.lua'
+  use 'tjdevries/gruvbuddy.nvim'
+  use 'feline-nvim/feline.nvim'
 end)

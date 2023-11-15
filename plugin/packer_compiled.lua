@@ -79,15 +79,35 @@ _G.packer_plugins = {
     path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["colorbuddy.vim"] = {
+    loaded = true,
+    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/colorbuddy.vim",
+    url = "https://github.com/tjdevries/colorbuddy.vim"
+  },
   ["copilot.vim"] = {
     loaded = true,
     path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
+  },
+  ["feline.nvim"] = {
+    loaded = true,
+    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/feline.nvim",
+    url = "https://github.com/feline-nvim/feline.nvim"
+  },
+  ["gruvbuddy.nvim"] = {
+    loaded = true,
+    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/gruvbuddy.nvim",
+    url = "https://github.com/tjdevries/gruvbuddy.nvim"
   },
   harpoon = {
     loaded = true,
@@ -99,15 +119,20 @@ _G.packer_plugins = {
     path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
+  ["melange-nvim"] = {
+    loaded = true,
+    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/melange-nvim",
+    url = "https://github.com/savq/melange-nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-hardline"] = {
+  ["nvim-colorizer.lua"] = {
     loaded = true,
-    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/nvim-hardline",
-    url = "https://github.com/ojroques/nvim-hardline"
+    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -158,6 +183,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["yash.nvim"] = {
+    loaded = true,
+    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/yash.nvim",
+    url = "https://github.com/kihachi2000/yash.nvim"
   }
 }
 

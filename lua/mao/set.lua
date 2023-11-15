@@ -29,4 +29,12 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = ""
+
+vim.o.cursorline = true
+vim.o.cursorlineopt = 'number'
+vim.opt.list = true
+vim.opt.numberwidth = 5
+
+vim.opt.listchars:append("eol:↵")
+
