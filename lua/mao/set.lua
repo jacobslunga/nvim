@@ -29,12 +29,10 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = ""
+vim.opt.colorcolumn = "100"
 
 vim.o.cursorline = true
 vim.o.cursorlineopt = 'number'
-vim.opt.list = true
-vim.opt.numberwidth = 5
-
-vim.opt.listchars:append("eol:↵")
-
+vim.opt.signcolumn = 'yes:2'
+vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'gr', '<C-o>', { noremap = true, silent = true })

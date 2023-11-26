@@ -13,6 +13,7 @@ return require('packer').startup(function(use)
   use({ 'ThePrimeagen/harpoon' })
   use({ 'mbbill/undotree' })
   use({ 'tpope/vim-fugitive' })
+  use({ 'tpope/vim-commentary' })
   use {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v3.x',
@@ -36,5 +37,7 @@ return require('packer').startup(function(use)
   use 'tjdevries/colorbuddy.vim'
   use 'norcalli/nvim-colorizer.lua'
   use 'tjdevries/gruvbuddy.nvim'
-  use 'feline-nvim/feline.nvim'
+  use 'nvim-lualine/lualine.nvim'
+  use 'nvim-tree/nvim-web-devicons'
+  use 'nvim-treesitter/nvim-treesitter-context'
 end)
