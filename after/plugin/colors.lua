@@ -1,5 +1,5 @@
 function ColorMyPencils()
-  color = color or "rose-pine"
+  color = color or "tokyonight"
   vim.cmd.colorscheme(color)
  -- require("colorbuddy").colorscheme "gruvbuddy"
  -- require("colorizer").setup()

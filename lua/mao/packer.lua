@@ -40,4 +40,7 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-treesitter/nvim-treesitter-context'
+  use 'Mofiqul/dracula.nvim'
+  use({ 'luisiacc/gruvbox-baby', {branch = 'main'} })
+  use 'vim-airline/vim-airline'
 end)
