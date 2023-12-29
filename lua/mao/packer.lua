@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
   use({ 'rose-pine/neovim', as = 'rose-pine' })
   use({ 'nvim-treesitter/nvim-treesitter', { run = 'TSUpdate' } })
   use({ 'nvim-treesitter/playground' }) 
+  use({ 'nvim-treesitter/nvim-treesitter-context' })
   use({ 'ThePrimeagen/harpoon' })
   use({ 'mbbill/undotree' })
   use({ 'tpope/vim-fugitive' })
@@ -31,16 +32,11 @@ return require('packer').startup(function(use)
     priority = 1000,
     opts = {},
   }
-  use "savq/melange-nvim"
   use "kihachi2000/yash.nvim"
-  use { "catppuccin/nvim", as = "catppuccin" }
   use 'tjdevries/colorbuddy.vim'
   use 'norcalli/nvim-colorizer.lua'
   use 'tjdevries/gruvbuddy.nvim'
-  use 'nvim-lualine/lualine.nvim'
   use 'nvim-tree/nvim-web-devicons'
-  use 'nvim-treesitter/nvim-treesitter-context'
-  use 'Mofiqul/dracula.nvim'
-  use({ 'luisiacc/gruvbox-baby', {branch = 'main'} })
+  use { "ellisonleao/gruvbox.nvim" }
   use 'vim-airline/vim-airline'
 end)
