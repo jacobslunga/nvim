@@ -1,95 +1,103 @@
-function ColorMyPencils()
-  -- color = color or "rose-pine"
-  -- vim.cmd.colorscheme(color)
-  require("colorbuddy").colorscheme "gruvbuddy"
-  require("colorizer").setup()
+function ColorMyPencils(color)
+  --require("rose-pine").setup({
+    --  variant = "auto",
+    --  dark_variant = "main",
+    --  dim_inactive_windows = false,
+    --  extend_background_behind_borders = true,
 
-  local c = require("colorbuddy.color").colors
-  local Group = require("colorbuddy.group").Group
-  local g = require("colorbuddy.group").groups
-  local s = require("colorbuddy.style").styles
+    --  enable = {
+      --    terminal = true,
+      --    legacy_highlights = true,
+      --    migrations = true,
+      --  },
 
-  Group.new("@variable", c.superwhite, nil)
+      --  styles = {
+        --    bold = true,
+        --    italic = false,
+        --    transparency = false,
+        --  },
 
-  Group.new("GoTestSuccess", c.green, nil, s.bold)
-  Group.new("GoTestFail", c.red, nil, s.bold)
+        --  groups = {
+          --    border = "muted",
+          --    link = "iris",
+          --    panel = "surface",
 
-  -- Group.new('Keyword', c.purple, nil, nil)
+          --    error = "love",
+          --    hint = "iris",
+          --    info = "foam",
+          --    note = "pine",
+          --    todo = "rose",
+          --    warn = "gold",
 
-  Group.new("TSPunctBracket", c.orange:light():light())
+          --    git_add = "foam",
+          --    git_change = "rose",
+          --    git_delete = "love",
+          --    git_dirty = "rose",
+          --    git_ignore = "muted",
+          --    git_merge = "iris",
+          --    git_rename = "pine",
+          --    git_stage = "iris",
+          --    git_text = "rose",
+          --    git_untracked = "subtle",
 
-  Group.new("StatuslineError1", c.red:light():light(), g.Statusline)
-  Group.new("StatuslineError2", c.red:light(), g.Statusline)
-  Group.new("StatuslineError3", c.red, g.Statusline)
-  Group.new("StatuslineError3", c.red:dark(), g.Statusline)
-  Group.new("StatuslineError3", c.red:dark():dark(), g.Statusline)
+          --    h1 = "iris",
+          --    h2 = "foam",
+          --    h3 = "rose",
+          --    h4 = "gold",
+          --    h5 = "pine",
+          --    h6 = "foam",
+          --  },
 
-  Group.new("pythonTSType", c.red)
-  Group.new("goTSType", g.Type.fg:dark(), nil, g.Type)
+          --  highlight_groups = {
+            --    -- Comment = { fg = "foam" },
+            --    -- VertSplit = { fg = "muted", bg = "muted" },
+            --  },
 
-  Group.new("typescriptTSConstructor", g.pythonTSType)
-  Group.new("typescriptTSProperty", c.blue)
+            --  before_highlight = function(group, highlight, palette)
+              --    -- Disable all undercurls
+              --    -- if highlight.undercurl then
+              --    --     highlight.undercurl = false
+              --    -- end
+              --    --
+              --    -- Change palette colour
+              --    -- if highlight.fg == palette.pine then
+              --    --     highlight.fg = palette.foam
+              --    -- end
+              --  end,
+              --})
 
-  -- vim.cmd [[highlight WinSeparator guifg=#4e545c guibg=None]]
-  Group.new("WinSeparator", nil, nil)
+              require("gruvbox").setup({
+                terminal_colors = true,
+                undercurl = true,
+                underline = true,
+                bold = true,
+                italic = {
+                  strings = false,
+                  emphasis = false,
+                  comments = false,
+                  operators = false,
+                  folds = false,
+                },
+                strikethrough = true,
+                invert_selection = false,
+                invert_signs = false,
+                invert_tabline = false,
+                invert_intend_guides = false,
+                inverse = true,
+                contrast = "",
+                palette_overrides = {},
+                overrides = {},
+                dim_inactive = false,
+                transparent_mode = false,
+              })
 
-  -- I don't think I like highlights for text
-  -- Group.new("LspReferenceText", nil, c.gray0:light(), s.bold)
-  -- Group.new("LspReferenceWrite", nil, c.gray0:light())
+              color = color or "gruvbox"
+              vim.cmd.colorscheme(color)
 
-  -- Group.new("TSKeyword", c.purple, nil, s.underline, c.blue)
-  -- Group.new("LuaFunctionCall", c.green, nil, s.underline + s.nocombine, g.TSKeyword.guisp)
+              vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+              vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+              vim.api.nvim_set_hl(0, 'SignColumn', {bg='NONE'})
+              -- vim.api.nvim_set_hl(0, 'LineNr', { bg = 'none', fg = '#3D3B40' })
+            end
 
-  Group.new("TSTitle", c.blue)
-
-  -- TODO: It would be nice if we could only highlight
-  -- the text with characters or something like that...
-  -- but we'll have to stick to that for later.
-  Group.new("InjectedLanguage", nil, g.Normal.bg:dark())
-
-  Group.new("LspParameter", nil, nil, s.italic)
-  Group.new("LspDeprecated", nil, nil, s.strikethrough)
-  Group.new("@function.bracket", g.Normal, g.Normal)
-  Group.new("@variable.builtin", c.purple:light():light(), g.Normal)
-
-  -- Group.new("VirtNonText", c.yellow:light():light(), nil, s.italic)
-  Group.new("VirtNonText", c.gray3:dark(), nil, s.italic)
-
-  Group.new("TreesitterContext", nil, g.Normal.bg:light())
-  Group.new("TreesitterContextLineNumber", c.blue)
-  -- hi TreesitterContextBottom gui=underline guisp=Grey
-  -- Group.new("TreesitterContextBottom", nil, nil, s.underline)
-
-  Group.new("@property", c.blue)
-  Group.new("@punctuation.bracket.rapper", c.gray3, nil, s.none)
-  Group.new("@rapper_argument", c.red, nil, s.italic)
-  Group.new("@rapper_return", c.orange:light(), nil, s.italic)
-  Group.new("@constructor.ocaml", c.orange:light(), nil, s.none)
-  Group.new("constant", c.orange, nil, s.none)
-
-  Group.new("@keyword", c.violet, nil, s.none)
-  Group.new("@keyword.faded", g.nontext.fg:light(), nil, s.none)
-  -- Group.new("@keyword.faded", c.green)
-
-  Group.new("Function", c.yellow, nil, s.none)
-
-  vim.cmd [[
-  hi link @function.call.lua LuaFunctionCall
-  hi link @lsp.type.variable.lua variable
-  hi link @lsp.type.variable.ocaml variable
-  hi link @lsp.type.variable.rust variable
-  hi link @lsp.type.namespace @namespace
-  hi link @punctuation.bracket.rapper @text.literal
-  hi link @normal Normal
-  ]]
-
-  Group.new("Normal", c.superwhite, c.gray0)
-
-  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-  vim.api.nvim_set_hl(0, 'SignColumn', {bg='NONE'})
-  vim.api.nvim_set_hl(0, 'LineNr', { bg = 'none', fg = '#3D3B40' })
-end
-
-ColorMyPencils()
-
+            ColorMyPencils()
