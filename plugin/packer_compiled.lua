@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/jacobslunga/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?.lua;/Users/jacobslunga/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?/init.lua;/Users/jacobslunga/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?.lua;/Users/jacobslunga/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/jacobslunga/.cache/nvim/packer_hererocks/2.1.1703358377/lib/lua/5.1/?.so"
+local package_path_str = "/Users/jacobslunga/.cache/nvim/packer_hererocks/2.1.1727621189/share/lua/5.1/?.lua;/Users/jacobslunga/.cache/nvim/packer_hererocks/2.1.1727621189/share/lua/5.1/?/init.lua;/Users/jacobslunga/.cache/nvim/packer_hererocks/2.1.1727621189/lib/luarocks/rocks-5.1/?.lua;/Users/jacobslunga/.cache/nvim/packer_hererocks/2.1.1727621189/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/jacobslunga/.cache/nvim/packer_hererocks/2.1.1727621189/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -79,35 +79,25 @@ _G.packer_plugins = {
     path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
   ["cmp-nvim-lua"] = {
     loaded = true,
     path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
     url = "https://github.com/hrsh7th/cmp-nvim-lua"
   },
-  ["colorbuddy.vim"] = {
+  ["cmp-path"] = {
     loaded = true,
-    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/colorbuddy.vim",
-    url = "https://github.com/tjdevries/colorbuddy.vim"
+    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
   },
-  ["copilot.vim"] = {
+  gruvbox = {
     loaded = true,
-    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/copilot.vim",
-    url = "https://github.com/github/copilot.vim"
-  },
-  ["dracula.nvim"] = {
-    loaded = true,
-    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/dracula.nvim",
-    url = "https://github.com/Mofiqul/dracula.nvim"
-  },
-  ["gruvbox.nvim"] = {
-    loaded = true,
-    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
-    url = "https://github.com/ellisonleao/gruvbox.nvim"
-  },
-  ["gruvbuddy.nvim"] = {
-    loaded = true,
-    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/gruvbuddy.nvim",
-    url = "https://github.com/tjdevries/gruvbuddy.nvim"
+    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/gruvbox",
+    url = "https://github.com/morhetz/gruvbox"
   },
   harpoon = {
     loaded = true,
@@ -129,11 +119,6 @@ _G.packer_plugins = {
     path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-colorizer.lua"] = {
-    loaded = true,
-    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
-    url = "https://github.com/norcalli/nvim-colorizer.lua"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -153,6 +138,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -189,6 +179,11 @@ _G.packer_plugins = {
     path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  ["vim-closer"] = {
+    loaded = true,
+    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/vim-closer",
+    url = "https://github.com/rstacruz/vim-closer"
+  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/vim-commentary",
@@ -199,15 +194,10 @@ _G.packer_plugins = {
     path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
-  ["vim-nightfly-colors"] = {
+  ["vim-todo-highlight"] = {
     loaded = true,
-    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/vim-nightfly-colors",
-    url = "https://github.com/bluz71/vim-nightfly-colors"
-  },
-  ["yash.nvim"] = {
-    loaded = true,
-    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/yash.nvim",
-    url = "https://github.com/kihachi2000/yash.nvim"
+    path = "/Users/jacobslunga/.local/share/nvim/site/pack/packer/start/vim-todo-highlight",
+    url = "https://github.com/sakshamgupta05/vim-todo-highlight"
   }
 }
 

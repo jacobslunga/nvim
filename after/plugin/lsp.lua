@@ -11,7 +11,6 @@ mason.setup()
 -- Ensure that the following language servers are installed
 local servers = {
   "pyright",        -- Python
-  "tsserver",       -- TypeScript/JavaScript
   "rust_analyzer",  -- Rust
   "clangd",         -- C/C++
   "html",           -- HTML
@@ -57,7 +56,7 @@ local default_config = {
     local buf_map = vim.api.nvim_buf_set_keymap
     local opts = { noremap = true, silent = true }
 
-    buf_map(bufnr, 'n', 'gd', '<Cmd>lua go_to_definition()<CR>', opts)
+    buf_map(bufnr, 'n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
     buf_map(bufnr, 'n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
     buf_map(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
     buf_map(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
@@ -66,7 +65,7 @@ local default_config = {
     buf_map(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
     buf_map(bufnr, 'n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
     buf_map(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-    buf_map(bufnr, 'n', 'gr', '<cmd>lua go_back()<CR>', opts)
+    buf_map(bufnr, 'n', 'gr', '<C-o>', opts)
     buf_map(bufnr, 'n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
     buf_map(bufnr, 'n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
     buf_map(bufnr, 'n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)

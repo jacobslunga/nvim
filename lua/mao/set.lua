@@ -34,7 +34,7 @@ vim.o.cursorlineopt = 'number'
 vim.opt.signcolumn = 'yes:2'
 vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'gr', '<C-o>', { noremap = true, silent = true })
--- vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "120"
 -- vim.opt.list = true
 -- vim.opt.listchars = {
 --   -- tab = "▸ ",
